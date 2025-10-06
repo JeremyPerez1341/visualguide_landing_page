@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>VisualGuide - Your Intelligent Visual Assistant</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;family=Open+Sans:wght@400;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style type="text/tailwindcss">
+    :root {
+        --primary-deep: #145A32;
+        --primary-dark: #1D8348;
+        --primary: #239B56;
+        --primary-light: #2ECC71;
+        --primary-lighter: #58D68D;
+        --primary-soft: #ABEBC6;
+        --primary-faint: #D5F5E3;
+        --primary-lightest: #E9F7EF;
+        --background-light: #FDFEFE;
+        --background-dark: #1C2833;
+      }
+      body {
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-deep': 'var(--primary-deep)',
+            'primary-dark': 'var(--primary-dark)',
+            'primary': 'var(--primary)',
+            'primary-light': 'var(--primary-light)',
+            'primary-lighter': 'var(--primary-lighter)',
+            'primary-soft': 'var(--primary-soft)',
+            'primary-faint': 'var(--primary-faint)',
+            'primary-lightest': 'var(--primary-lightest)',
+            'background-light': 'var(--background-light)',
+            'background-dark': 'var(--background-dark)',
+          },
+          fontFamily: {
+            'sans': ['Open Sans', 'sans-serif'],
+            'display': ['Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+  <div class="flex min-h-screen w-full flex-col">
+    <header
+      class="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-background-light/80 backdrop-blur-sm dark:border-gray-700/50 dark:bg-background-dark/80">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
+        <div class="flex items-center gap-3">
+          <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l1.5-1.5c1.45-1.45 3.34-2.4 5.5-2.4v-2c-2.92 0-5.63 1.4-7.35 3.65l-1.65-1.65L2.5 15.5H7v-1.5H4.21c.53-1.07 1.25-2.03 2.14-2.82L8.5 9.36c.63.63 1.17 1.34 1.63 2.14H10v2h5.5l-1.5 1.5c-1.45 1.45-3.34 2.4-5.5 2.4v2c2.92 0 5.63-1.4 7.35-3.65l1.65 1.65L21.5 8.5H17v1.5h2.79c-.53 1.07-1.25 2.03-2.14 2.82l-2.12 2.12c-.63-.63-1.17-1.34-1.63-2.14H14v-2H8.5z">
+            </path>
+          </svg>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white font-display">VisualGuide</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex">
+          <a class="text-base font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+            href="#">Home</a>
+          <a class="text-base font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+            href="#">Features</a>
+          <a class="text-base font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+            href="#">Support</a>
+          <a class="text-base font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+            href="#">Contact</a>
+        </nav>
+        <button
+          class="hidden rounded-full bg-primary-dark px-6 py-2.5 text-base font-bold text-white shadow-lg shadow-primary-dark/30 transition-transform duration-300 hover:scale-105 hover:bg-primary-deep md:block">
+          Download App
+        </button>
+        <button class="p-2 md:hidden">
+          <span class="material-symbols-outlined text-gray-800 dark:text-gray-200"> menu </span>
+        </button>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <section class="relative flex min-h-[60vh] items-center justify-center bg-cover bg-center py-20 md:min-h-[80vh]"
+        style='background-image: linear-gradient(to top, rgba(20, 90, 50, 0.8) 0%, rgba(29, 131, 72, 0.3) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkNIJFnFdhSdrnRGbDIy_cB7ZLP_1m-t9Gf25ufmL0DmnIS0QPLX7d63A7klTbBSHD8HNg76P68O9z3NjJboc_X4dpxS-SQaSThwmAesTt0Ngy1_usjcPYW21DBaXWIKREpCLXJXBdI7-IQUYhFfcoF3ukco-EFKHD0cU-a7hjb3ORb0WkOZtdJ_KZ055IU8Oj_k0OF8VCZp2lSwkDokX_2u4QyAOX51QT-SAxiiZaVzdGC-pAiX0akVLd6QGYH408NY4Md3XdWPE");'>
+        <div class="container mx-auto px-4 text-center text-white">
+          <h1 class="text-5xl font-extrabold leading-tight tracking-tight md:text-7xl font-display">Your Home, Seen Anew
+          </h1>
+          <p class="mx-auto mt-6 max-w-3xl text-xl text-primary-lightest">
+            VisualGuide is your intelligent visual assistant, designed to help you navigate your home with confidence
+            and ease. Experience a new level of independence with
+            AI-powered insights.
+          </p>
+          <button
+            class="mt-10 rounded-full bg-primary-light hover:bg-primary-lighter px-10 py-5 text-lg font-bold text-primary-deep shadow-xl shadow-primary-dark/20 transition-transform duration-300 hover:scale-105">
+            Download the App
+          </button>
+        </div>
+      </section>
+      <section class="bg-primary-lightest py-20 dark:bg-background-dark sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2
+              class="text-4xl font-extrabold tracking-tight text-primary-deep dark:text-white sm:text-5xl font-display">
+              Key Features</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-lg text-primary-dark dark:text-primary-soft">VisualGuide offers a
+              suite of powerful features to enhance your daily life at home.</p>
+          </div>
+          <div class="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div
+              class="flex flex-col items-center text-center gap-4 rounded-2xl bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800/50 dark:hover:shadow-primary-dark/10">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary-faint text-primary-dark">
+                <span class="material-symbols-outlined text-4xl"> visibility </span>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-xl font-bold text-primary-deep dark:text-white font-display">AI Environment
+                  Interpretation</h3>
+                <p class="text-base text-gray-600 dark:text-primary-faint">Our advanced AI understands your
+                  surroundings, providing detailed descriptions of your environment.</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center text-center gap-4 rounded-2xl bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800/50 dark:hover:shadow-primary-dark/10">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary-faint text-primary-dark">
+                <span class="material-symbols-outlined text-4xl"> text_fields </span>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-xl font-bold text-primary-deep dark:text-white font-display">Object, Text, &amp; Color
+                  Recognition</h3>
+                <p class="text-base text-gray-600 dark:text-primary-faint">Identify objects, read text, and recognize
+                  colors with ease, making everyday tasks simpler.</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center text-center gap-4 rounded-2xl bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800/50 dark:hover:shadow-primary-dark/10">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary-faint text-primary-dark">
+                <span class="material-symbols-outlined text-4xl"> navigation </span>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-xl font-bold text-primary-deep dark:text-white font-display">Real-Time Guidance</h3>
+                <p class="text-base text-gray-600 dark:text-primary-faint">Receive step-by-step guidance for navigation
+                  and tasks, ensuring you move safely and efficiently.</p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center text-center gap-4 rounded-2xl bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg dark:bg-gray-800/50 dark:hover:shadow-primary-dark/10">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary-faint text-primary-dark">
+                <span class="material-symbols-outlined text-4xl"> home_pin </span>
+              </div>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-xl font-bold text-primary-deep dark:text-white font-display">Pre-Mapped Home Safety</h3>
+                <p class="text-base text-gray-600 dark:text-primary-faint">Customize your home's layout for enhanced
+                  safety, with pre-mapped routes and hazard alerts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-background-light py-20 dark:bg-background-dark sm:py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2
+              class="text-4xl font-extrabold tracking-tight text-primary-deep dark:text-white sm:text-5xl font-display">
+              Integrantes</h2>
+          </div>
+          <div class="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="text-center">
+              <div class="mx-auto mb-4 h-32 w-32 rounded-full bg-primary-faint flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-primary-dark"> person </span>
+              </div>
+              <h3 class="text-lg font-semibold text-primary-deep dark:text-white">More Rondon, Christopher Sebastian
+              </h3>
+            </div>
+            <div class="text-center">
+              <div class="mx-auto mb-4 h-32 w-32 rounded-full bg-primary-faint flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-primary-dark"> person </span>
+              </div>
+              <h3 class="text-lg font-semibold text-primary-deep dark:text-white">Perez Pizarro, Pedro Jeremy</h3>
+            </div>
+            <div class="text-center">
+              <div class="mx-auto mb-4 h-32 w-32 rounded-full bg-primary-faint flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-primary-dark"> person </span>
+              </div>
+              <h3 class="text-lg font-semibold text-primary-deep dark:text-white">Ramos Najar, Tony Alexander</h3>
+            </div>
+            <div class="text-center">
+              <div class="mx-auto mb-4 h-32 w-32 rounded-full bg-primary-faint flex items-center justify-center">
+                <span class="material-symbols-outlined text-6xl text-primary-dark"> person </span>
+              </div>
+              <h3 class="text-lg font-semibold text-primary-deep dark:text-white">Rodriguez Vargas, Arian Martín</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-primary-lightest py-20 dark:bg-background-dark sm:py-24">
+        <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-extrabold tracking-tight text-primary-deep dark:text-white sm:text-5xl font-display">
+            Ready to Experience VisualGuide?</h2>
+          <p class="mt-4 text-lg text-primary-dark dark:text-primary-soft">Download the app today and take the first
+            step towards a more independent and connected home life.</p>
+          <button
+            class="mt-10 rounded-full bg-primary-dark hover:bg-primary-deep px-10 py-5 text-lg font-bold text-white shadow-xl shadow-primary-dark/30 transition-transform duration-300 hover:scale-105">
+            Download Now
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-gray-200 bg-primary-lightest dark:border-gray-800 dark:bg-gray-900/50">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 md:order-2">
+            <a class="text-base text-primary-dark hover:text-primary-deep dark:text-primary-soft dark:hover:text-primary-light"
+              href="#">Privacy Policy</a>
+            <a class="text-base text-primary-dark hover:text-primary-deep dark:text-primary-soft dark:hover:text-primary-light"
+              href="#">Terms of Service</a>
+            <a class="text-base text-primary-dark hover:text-primary-deep dark:text-primary-soft dark:hover:text-primary-light"
+              href="#">Contact Us</a>
+          </div>
+          <p class="text-center text-base text-primary-dark dark:text-primary-soft md:order-1">© 2025 VisualGuide. All
+            rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
